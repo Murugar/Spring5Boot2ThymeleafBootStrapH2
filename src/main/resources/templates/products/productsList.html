@@ -1,51 +1,62 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
-    <head>
-        <title>Product</title>
-        
-        <link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
-            rel="stylesheet" />
-        
-        <link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
-            rel="stylesheet" />
-        
-        <link th:href="@{/webjars/font-awesome/css/font-awesome.min.css}"
-            rel="stylesheet" />
-        
-        <link th:href="@{/css/style.css}" rel="stylesheet" />
-    </head>
+<head>
+<title>Product</title>
 
-    <body>    
-        <div class="container">
-            <div class="page-header">
-                <h1 class="text-primary">Sample Product list</h1>
-            </div>
-            
-            <table class="table table-bordered">
-                <thead>
-                    <tr class="text-primary bg-success">
-                        <th></th>
-                        <th>Name</th>
-                        <th>Amount</th>
-                        <th>Value</th>
-                        <th>Description</th>
-                    </tr>
-                </thead>
-                
-                <tbody class="text-danger bg-warning">
-                    <tr th:each="Product: ${products}">
-                        <td th:text="${Product.id}"></td>
-                        <td th:text="${Product.name}"></td>
-                        <td th:text="${Product.Amount}"></td>
-                        <td th:text="${Product.Vlr}"></td>
-                        <td th:text="${Product.Description}"></td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
+<link th:href="@{/webjars/bootstrap/css/bootstrap.min.css}"
+	rel="stylesheet" />
+
+<link th:href="@{/webjars/bootstrap/css/bootstrap-theme.min.css}"
+	rel="stylesheet" />
+
+<link th:href="@{/webjars/font-awesome/css/font-awesome.min.css}"
+	rel="stylesheet" />
+
+<link th:href="@{/css/style.css}" rel="stylesheet" />
+</head>
+
+<body>
+	<div class="container">
+		
+
         
-        <script th:src="@{/webjars/jquery/jquery.min.js}"></script>
-    
-        <script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
-    </body>
+
+		<div class="panel panel-default panel-primary">
+		
+		<div class="panel-heading"><h3>Sample Product list</h3></div>
+		
+		
+			<div class="panel-body">
+
+				<table class="table table-bordered">
+					<thead>
+						<tr class="text-primary bg-success">
+							<th></th>
+							<th>Name</th>
+							<th>Amount</th>
+							<th>Value</th>
+							<th>Description</th>
+						</tr>
+					</thead>
+
+					<tbody class="text-danger bg-warning">
+						<tr th:each="Product: ${products}">
+							<td th:text="${Product.id}"></td>
+							<td th:text="${Product.name}"></td>
+							<td th:text="${Product.Amount}"></td>
+							<td th:text="${Product.Vlr}"></td>
+							<td th:text="${Product.Description}"></td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+
+		</div>
+
+	</div>
+
+	<script th:src="@{/webjars/jquery/jquery.min.js}"></script>
+
+	<script th:src="@{/webjars/bootstrap/js/bootstrap.min.js}"></script>
+</body>
 </html>
