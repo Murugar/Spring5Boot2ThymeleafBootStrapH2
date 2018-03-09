@@ -12,7 +12,7 @@ import com.iqmsoft.model.Product;
 import com.iqmsoft.services.ProductService;
 
 @Controller
-@RequestMapping(value = "/products")
+@RequestMapping(value = "/")
 public class ProductController{
 	
 	@Autowired
